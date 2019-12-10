@@ -1,7 +1,6 @@
 #引用文件选择对话框
-from tkinter.filedialog import askopenfilename
-from tkinter.filedialog import asksaveasfilename
-from tkinter.filedialog import askopenfilename
+from tkinter.filedialog import askopenfilename,asksaveasfilename,askopenfilename
+
 def main():
     print("this program creates a file of username from a")
     print("file of names")
