@@ -1,6 +1,6 @@
 ## 冒泡算法
 ## bubble sort
-## 思路,每一次循环,让最大(或最小)的数向气泡一样,走向一侧
+## 思路,每一次循环,让最小的数向气泡一样,走向左侧
 
 def bigerToRight(arr):
     count = 0
@@ -21,8 +21,8 @@ def bigerToRight(arr):
     for i in range(1,len(arr)):# 外侧循环,为什么是从1开始?因为
         for j in range(0,len(arr)-i):
             count = count +1 
-            if arr[j] > arr[j+1]:
-                arr[j],arr[j+1] = arr[j+1],arr[j]
+            if arr[-1-j] < arr[-2-j]:
+                arr[-2-j],arr[-1-j]  = arr[-1-j] , arr[-2-j] 
             print("第 %d 次移动后>>i:%d  ,j:%d  "% (count,i,j) ,"移动后>>  arr:",arr)
     ## '''
 
@@ -33,11 +33,11 @@ def main():
         #输入一组数字,用英文逗号分割,回车结束
         arrString = input("输入一组数字,用英文逗号分割:")
 
-        arr = arrString.split(",")
+        arrStr = arrString.split(",")
 
         ## 第一种把字符转成数字的方式
         # print(id(arr))
-        arr = [int(n) for n in arr]
+        arr = [int(n) for n in arrStr]
         # print(id(arr))
         ## 第二种把字符转成数字的方式
         # print(id(arr))
