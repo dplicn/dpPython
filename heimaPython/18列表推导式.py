@@ -34,6 +34,6 @@ l1 = []
 
 
 l1 = [(i,j) for i in range(1,3) for j in range(3)]
-print(l1)7
+print(l1)
 
 d = {}
